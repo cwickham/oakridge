@@ -1,0 +1,52 @@
+---
+title: "Hello, Penguins!"
+author: "Charlotte Wickham"
+format: html
+---
+
+## Data
+
+For this analysis we'll use the `penguins` dataset from the palmerpenguins package.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(ggthemes)
+library(palmerpenguins)
+```
+
+## Species
+
+Below is a scatterplot plot of species of penguins.
+
+```{r}
+#| label: bill-dims-species
+#| fig-width: 5
+#| fig-asp: 0.618
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_colorblind() +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)")
+```
+
+## Penguins
+
+The table below shows the first 10 penguins from the dataset.
+
+```{r}
+#| label: penguins-top10
+penguins |>
+  slice_head(n = 10) |>
+  select(species, island, bill_length_mm, bill_depth_mm) |>
+  kable()
+```
+

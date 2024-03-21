@@ -1,0 +1,51 @@
+---
+title: "Hello, Penguins!"
+author: "Charlotte Wickham"
+format: html
+execute:
+  echo: false
+bibliography: references.bib
+---
+
+## Data
+
+For this analysis we'll use the `penguins` dataset from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins/) package [@gorman2014].
+
+```{python}
+#| label: load-packages
+#| message: false
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+penguins = sns.load_dataset("penguins")
+```
+
+## Species
+
+@fig-bills-dims-species is a scatterplot plot of species of penguins.
+
+```{python}
+#| label: fig-bills-dims-species
+#| fig-cap: "A scatterplot of three species of penguins showing the relationship between bill depth and bill length."
+#| fig-width: 5
+#| fig-asp: 0.618
+#| warning: false
+sns.scatterplot(data=penguins, x="bill_length_mm",
+  y="bill_depth_mm", hue="species", style="species", palette="colorblind")
+plt.xlabel("Bill length (mm)")
+plt.ylabel("Bill depth (mm)")
+plt.show()
+```
+
+## Penguins
+
+@tbl-penguins-top10 shows the first 10 penguins from the dataset.
+
+```{python}
+#| label: tbl-penguins-top10
+#| tbl-cap: These are the first 10 penguins in the data.
+#| tbl-cap-location: bottom
+penguins.head(10)[['species', 'island', 'bill_length_mm',
+  'bill_depth_mm']]
+```

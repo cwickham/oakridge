@@ -1,0 +1,42 @@
+/*-- scss:defaults --*/
+$quarto-blue: #39729E;
+$link-color: $quarto-blue;
+
+$code-color: #b2672d;
+$code-block-bg: #ccc;
+$code-block-font-size: 0.8em;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+$font-family-sans-serif: "Crimson Text", sans-serif;
+$presentation-heading-color: $quarto-blue;
+
+
+/*-- scss:rules --*/
+
+.reveal img.inline {
+    height:1em;
+    vertical-align:middle;
+}
+
+div.code-with-filename {
+    border: 1px #999;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+div.code-with-filename pre code {
+    background-color: #f8f9fa;
+    padding: 0.5em;
+}
+
+div.code-with-filename div.code-with-filename-file {
+    background-color: rgba(219,219,219);
+    padding-left: 0.5em;
+}
+
+div.code-with-filename div.code-with-filename-file pre{
+    background-color: rgba(219,219,219);
+    padding: 0;
+}
