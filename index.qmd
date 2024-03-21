@@ -47,6 +47,6 @@ The table below shows the first 10 penguins from the dataset.
 penguins |>
   slice_head(n = 10) |>
   select(species, island, bill_length_mm, bill_depth_mm) |>
-  kable()
+  knitr::kable()
 ```
 
