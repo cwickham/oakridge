@@ -1,6 +1,6 @@
 # Quarto: Reproducible Publishing
 
-Slides
+[Slides](https://charlotte.quarto.pub/quarto-oakridge)
 
 ## Abstract
 
