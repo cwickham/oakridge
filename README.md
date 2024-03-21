@@ -113,7 +113,7 @@ website:
   navbar:
     left:
       - index.qmd
-      - talk.qmd
+      - slides.qmd
 ```
 
 - Render
